@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ti 🤎</title>
+  
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FONDO ANIMADO Y PARTICULAS -->
+  <div class="sky">
+    <div class="cloud-glow"></div>
+    <div id="starfield"></div>
+  </div>
+  <div id="particles" class="floating-particles"></div>
+  <div id="fireworks" class="fireworks"></div>
+
+  <!-- AUDIO DE FONDO -->
+  <audio id="bg-music" loop src="musica.mp3"></audio>
+
+  <!-- CONTROLES FLOTANTES -->
+  <div class="floating-controls">
+    <button id="music-toggle" class="fc-btn show" aria-label="Reproducir o pausar música">🎵</button>
+  </div>
+
+  <!-- ==================== PÁGINAS DEL REGALO ==================== -->
+
+  <!-- 0. BIENVENIDA (Comienza con la clase 'active') -->
+  <section id="page-welcome" class="page active">
+    <div class="page-inner">
+      <span class="eyebrow">Un regalo especial</span>
+      <h1 class="title-main">Feliz Cumpleaños</h1>
+      <p class="subtitle-script">Para mi persona favorita en el mundo 🤎🤍</p>
+      <div class="divider-glow"></div>
+      <p class="body-text">
+        He preparado este pequeño rincón para ti, para recordar un poco de lo que hemos vivido juntos y todo lo que significas para mí.
+      </p>
+      <div class="btn-row">
+        <button class="btn" data-next="timeline">Empezar el viaje ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. LÍNEA DE TIEMPO -->
+  <section id="page-timeline" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo I</span>
+      <h2 class="title-section">Nuestra Historia</h2>
+      <p class="subtitle-script">Los momentos que nos trajeron hasta aquí</p>
+      
+      <div id="timeline-container" class="timeline"></div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">¿Qué opinas de cómo empezó todo?</p>
+        <div class="btn-row">
+          <a id="mail-timeline" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="letter">Siguiente página →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CARTA -->
+  <section id="page-letter" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo II</span>
+      <h2 class="title-section">De Mi Para Ti</h2>
+      <p class="subtitle-script">Palabras que salen del corazón</p>
+
+      <div class="letter-paper glass">
+        <div id="letter-text"></div>
+      </div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">¿Te gustó la carta?</p>
+        <div class="btn-row">
+          <a id="mail-letter" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="album">Siguiente página →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ÁLBUM DE RECUERDOS -->
+  <section id="page-album" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo III</span>
+      <h2 class="title-section">Galería de Momentos</h2>
+      <p class="subtitle-script">Un recorrido en imágenes</p>
+
+      <div id="album-container" class="album-grid"></div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">¿Cuál fue tu foto favorita?</p>
+        <div class="btn-row">
+          <a id="mail-album" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="comic">Siguiente página →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CÓMIC -->
+  <section id="page-comic" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo IV</span>
+      <h2 class="title-section">Nuestro Cómic</h2>
+      <p class="subtitle-script">Nuestra historia en viñetas</p>
+
+      <div id="comic-container" class="comic-strip"></div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">¿Qué tal nos vemos dibujados?</p>
+        <div class="btn-row">
+          <a id="mail-comic" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="gifts">Siguiente página →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 21 REGALOS -->
+  <section id="page-gifts" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo V</span>
+      <h2 class="title-section">21 Regalos</h2>
+      <p class="subtitle-script">Abre cada caja para descubrir una sorpresa</p>
+
+      <div id="gifts-container" class="gifts-grid"></div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">¿Qué te parecieron las sorpresas?</p>
+        <div class="btn-row">
+          <a id="mail-gifts" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="reasons">Siguiente página →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 50 RAZONES -->
+  <section id="page-reasons" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">Capítulo VI</span>
+      <h2 class="title-section">50 Razones</h2>
+      <p class="subtitle-script">De por qué te amo tanto</p>
+
+      <div id="reasons-container" class="reasons-grid"></div>
+
+      <div class="end-of-section">
+        <p class="opinion-text">Hay miles de razones más...</p>
+        <div class="btn-row">
+          <a id="mail-reasons" class="btn-ghost" target="_blank">Escribir opinión ✉️</a>
+          <button class="btn" data-next="finale">Gran Final ✨</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FINAL -->
+  <section id="page-finale" class="page">
+    <div class="page-inner">
+      <span class="eyebrow">¡Feliz Cumpleaños!</span>
+      <h2 class="title-main">Te Amo</h2>
+      <div id="finale-names" class="names"></div>
+      <p class="body-text">Gracias por ser mi lugar seguro, mi compañero y mi persona favorita. Espero seguir celebrando a tu lado por muchísimos años más.</p>
+      
+      <div class="btn-row" style="margin-top: 2rem;">
+        <button class="btn" data-next="welcome">Volver al inicio ↺</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODALES ==================== -->
+
+  <!-- Modal Línea de Tiempo -->
+  <div id="modal-timeline-detail" class="modal-overlay">
+    <div class="modal-box glass">
+      <button class="modal-close" data-close-modal="modal-timeline-detail">&times;</button>
+      <div id="modal-timeline-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal Álbum -->
+  <div id="modal-album-detail" class="modal-overlay">
+    <div class="modal-box glass">
+      <button class="modal-close" data-close-modal="modal-album-detail">&times;</button>
+      <div id="modal-album-body"></div>
+    </div>
+  </div>
+
+  <!-- Modal Regalos -->
+  <div id="modal-gift-detail" class="modal-overlay">
+    <div class="modal-box glass">
+      <button class="modal-close" data-close-modal="modal-gift-detail">&times;</button>
+      <div id="modal-gift-body"></div>
+    </div>
+  </div>
+
+  <!-- Script Lógica Principal -->
+  <script src="script.js"></script>
+</body>
+</html>
