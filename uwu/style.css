@@ -425,45 +425,7 @@ h1,h2,h3{ font-weight:600; margin:0; }
 .comic-narration{ font-size:.95rem; color:var(--silver-soft); margin-bottom:.4rem; font-style:italic; }
 .comic-dialogue{ font-family:var(--font-script); font-size:1.25rem; color:var(--pink); }
 
-/* ---------- 11. SECCIÓN 5: 21 REGALOS ---------- */
-.gifts-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(110px,1fr));
-  gap:1.3rem;
-  max-width:880px;
-  margin-top:2.5rem;
-}
-.gift-box{
-  position:relative;
-  aspect-ratio:1/1;
-  border-radius:14px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:var(--font-serif);
-  font-size:1.6rem;
-  color:var(--silver);
-  background:linear-gradient(145deg, var(--purple-dark), var(--navy));
-  box-shadow:0 6px 18px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.08) inset;
-  transition:transform .35s ease, box-shadow .35s ease;
-  overflow:hidden;
-}
-.gift-box::before{
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
-  transform:translateX(-120%);
-}
-.gift-box:hover{ transform:translateY(-4px) scale(1.04); box-shadow:0 10px 28px rgba(255,143,214,.4); }
-.gift-box:hover::before{ transform:translateX(120%); transition:transform .8s ease; }
-.gift-box.opened{
-  background:linear-gradient(145deg, var(--pink), var(--purple-dark));
-  animation:giftPop .5s ease;
-}
-@keyframes giftPop{ 0%{ transform:scale(1); } 40%{ transform:scale(1.18) rotate(-4deg); } 100%{ transform:scale(1); } }
-
-/* ---------- 12. SECCIÓN 6: 50 RAZONES ---------- */
+/* ---------- 11. SECCIÓN 6: 50 RAZONES ---------- */
 .reasons-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
@@ -488,7 +450,7 @@ h1,h2,h3{ font-weight:600; margin:0; }
 }
 .reason-number{ display:block; font-family:var(--font-script); color:var(--pink); font-size:1.3rem; margin-bottom:.3rem; }
 
-/* ---------- 13. SECCIÓN FINAL ---------- */
+/* ---------- 12. SECCIÓN FINAL ---------- */
 #finale .names{
   font-family:var(--font-display);
   font-size:clamp(2.4rem,5vw,3.6rem);
@@ -520,7 +482,7 @@ h1,h2,h3{ font-weight:600; margin:0; }
   to{ transform:translateY(110vh) rotate(540deg); opacity:0; }
 }
 
-/* ---------- 14. MODAL ---------- */
+/* ---------- 13. MODAL ---------- */
 .modal-overlay{
   position:fixed; inset:0; z-index:50;
   background:rgba(8,6,18,.78);
@@ -566,7 +528,7 @@ h1,h2,h3{ font-weight:600; margin:0; }
 .modal-title{ font-family:var(--font-serif); font-size:1.3rem; margin:.3rem 0 .8rem; }
 .modal-feeling{ font-style:italic; color:var(--silver-soft); margin-top:1rem; font-size:.95rem; }
 
-/* ---------- 15. CONTROLES FLOTANTES (música / volver arriba) ---------- */
+/* ---------- 14. CONTROLES FLOTANTES (música / volver arriba) ---------- */
 .floating-controls{
   position:fixed;
   bottom:1.6rem;
@@ -594,7 +556,7 @@ h1,h2,h3{ font-weight:600; margin:0; }
 .fc-btn.show{ opacity:1; visibility:visible; }
 .fc-btn:hover{ transform:scale(1.1); box-shadow:0 0 16px rgba(255,143,214,.5); }
 
-/* ---------- 16. RESPONSIVE ---------- */
+/* ---------- 15. RESPONSIVE ---------- */
 @media (max-width:640px){
   .page{ padding:5vh 6vw 8vh; }
   .title-main{ font-size:2.4rem; }
